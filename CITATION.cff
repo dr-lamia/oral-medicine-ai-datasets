@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "If this catalogue supports your research, please cite the repository and the original dataset publications."
+title: "Oral Medicine AI Datasets"
+type: dataset
+authors:
+  - family-names: ElFadaly
+    given-names: Lamiaa
+year: 2026
+license: CC-BY-4.0
+repository-code: "https://github.com/dr-lamia/oral-medicine-ai-datasets"
