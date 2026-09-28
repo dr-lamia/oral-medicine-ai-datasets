@@ -13,7 +13,7 @@ A curated, research-focused catalogue of public datasets for artificial intellig
 - Documents access and metadata limitations.
 - Suggests publishable research uses rather than only listing downloads.
 
-The machine-readable catalogue is in [`datasets.csv`](datasets.csv).
+The machine-readable catalogue is in [`datasets.csv`](datasets.csv). It currently tracks **25 resources**, including core oral-specific datasets, adjacent head-and-neck multimodal cohorts, evolving repositories, and derivative resources that require provenance caution.
 
 ## Recommended datasets by research task
 
@@ -25,6 +25,9 @@ The machine-readable catalogue is in [`datasets.csv`](datasets.csv).
 | Oral cytology | Multicentre Oral Cytology | Nucleus detection, slide classification and stain-domain generalization |
 | Odontogenic lesions | DOLCHID | CBCT segmentation and pathology-informed diagnosis |
 | Multimodal dental AI | COde | Longitudinal vision-language modelling and patient-level leakage analysis |
+| Dysplasia and OPMD histopathology | NDB-UFES + IISc OPMD WSI | Case-level dysplasia grading and progression-risk research |
+| Tumour segmentation | OCDC | WSI-held-out OSCC tumour segmentation |
+| Multimodal cancer prognosis | TCGA-HNSC + CPTAC-HNSCC + HANCOCK | Oral-subsite-filtered external validation and survival modelling |
 
 ## Current priority project
 
@@ -52,7 +55,7 @@ Recommended title:
 
   **DOI correction:** the MELBA webpage/PDF may display `10.17632/7m9zkcx539.1.163`. That string is malformed and returns “DOI not found.” The verified dataset DOI is [`10.17632/7m9zkcx539.1`](https://doi.org/10.17632/7m9zkcx539.1).
 - **SinaiU-OMP** — 300 images across normal mucosa, OSCC, odontogenic keratocyst, plexiform ameloblastoma and pleomorphic adenoma. [Dataset](https://doi.org/10.17632/y9cjhmf8rz.1) · [Paper](https://doi.org/10.1038/s41598-026-70053-z)
-- **Multi-OSCC** — 1,325 patients with multiscale tumour-core/edge images and six diagnostic/prognostic endpoints. [Dataset](https://doi.org/10.5281/zenodo.16842637) · [Paper](https://doi.org/10.1038/s41597-026-06736-z) · [Code](https://github.com/guanjinquan/OSCC-PathologyImageDataset)
+- **Multi-OSCC** — 1,325 patients with multiscale tumour-core/edge images and six diagnostic/prognostic endpoints; the full release is approximately **34 GB**. [Dataset](https://doi.org/10.5281/zenodo.16842637) · [Paper](https://doi.org/10.1038/s41597-026-06736-z) · [Code](https://github.com/guanjinquan/OSCC-PathologyImageDataset)
 
 ### Cytology
 
@@ -65,6 +68,39 @@ Recommended title:
 ### Longitudinal multimodal records
 
 - **COde** — 8,775 checkups from 4,800 patients, approximately 50,000 intraoral photographs, 8,056 radiographs and bilingual clinical records. [Dataset](https://huggingface.co/datasets/zirak-ai/COde) · [Paper](https://doi.org/10.1038/s41597-026-07342-9) · [Code](https://github.com/zirak-ai/COde)
+
+## Additional collected resources
+
+### Clinical photography and referral
+
+- **Annotated Oral Cavity Images (Sri Lanka)** — 3,000 images from 714 patients with healthy, benign, OPMD and oral-cancer labels plus polygon/COCO annotations. [Dataset](https://zenodo.org/records/10664056) · [Paper](https://doi.org/10.1016/j.oraloncology.2024.106946)
+- **Cairo Annotated Oral Lesions** — 9,201 normal, low-risk and high-risk intraoral images with LabelMe annotations. [Dataset](https://zenodo.org/records/14571990) · [Paper](https://doi.org/10.1038/s41415-025-9007-6)
+- **Oral Images Dataset** — 323 primary benign/malignant images plus augmented derivatives; patient grouping needs verification. [Dataset](https://data.mendeley.com/datasets/mhjyrn35p4/2)
+
+### Histopathology and segmentation
+
+- **ORCHID** — approximately 300,000 multicentre Indian patches spanning normal, OSMF and three OSCC differentiation grades. [Training set](https://zenodo.org/records/12636426) · [Validation/test](https://zenodo.org/records/12646943) · [Paper](https://pubmed.ncbi.nlm.nih.gov/39333529/)
+- **NDB-UFES** — 237 Brazilian H&E images of leukoplakia with/without dysplasia and OSCC, with clinical-demographic variables. [Dataset](https://data.mendeley.com/datasets/bbmmm4wgr8) · [Paper](https://doi.org/10.1016/j.dib.2023.109033)
+- **Rahman Oral Histopathology** — 1,224 normal/OSCC images from 230 patients at 100× and 400×. [Dataset](https://data.mendeley.com/datasets/ftmp4cvtmb/2) · [Paper](https://doi.org/10.1016/j.dib.2020.105114)
+- **OCDC** — 1,020 pixel-annotated patches from 15 source WSIs; evaluation must split by WSI, never by patch. [Dataset](https://data.mendeley.com/datasets/9bsc36jyrt/1) · [Paper](https://arxiv.org/abs/2303.10172)
+- **IISc OPMD WSI Repository** — oral-pathology whole-slide repository for OPMDs; counts and access conditions require confirmation. [Repository](https://www.midas.iisc.ac.in/fe/datasets/oral/oral-pathology-a-whole-slide-imaging-repository-for-opmd)
+- **COOP** — de-identified scanned oral-pathology cases; useful as a case repository, not a fixed benchmark. [Repository](https://openoralpathology.org/)
+
+### Clinical and multimodal cancer cohorts
+
+- **AIKosh Oral Cancer Imaging and Clinical Dataset** — Indian clinical, radiological and histopathological data; detailed counts and licence require portal-level verification. [Dataset](https://aikosh.indiaai.gov.in/home/datasets/details/oral_cancer_imaging_and_clinical_dataset.html)
+- **lyDATA KSA Oral Cavity** — 66 Saudi oral-cavity OSCC patient records focused on lymphatic metastatic progression. [Dataset](https://zenodo.org/records/18231357)
+- **TCGA-HNSC** — 528 head-and-neck cancer cases with molecular, pathology and clinical data. Oral research must filter by anatomical subsite. [Dataset](https://portal.gdc.cancer.gov/projects/TCGA-HNSC)
+- **CPTAC-HNSCC** — 207 patients with radiology, pathology, clinical, genomic and proteomic modalities. [Dataset](https://www.cancerimagingarchive.net/collection/cptac-hnscc/)
+- **HANCOCK** — 763 patients and 13,684 pathology images with linked clinical/laboratory information. [Dataset](https://doi.org/10.7937/rcty-5h16)
+
+### Evolving, derivative or limited-provenance resources
+
+- **SMART/SMITA evolving release** — versioned smartphone-image resource that may overlap SMART-OM; deduplicate before combining. [Dataset](https://zenodo.org/records/16313710)
+- **Oral AI Prediction Outputs** — prediction CSVs, not a new patient or image cohort. [Repository](https://doi.org/10.5281/zenodo.19551358)
+- **Kaggle Oral Cancer Lips and Tongue** — retained only as a provenance-warning record. It should not support clinical claims until original sources, patient grouping and duplicates are verified. [Page](https://www.kaggle.com/datasets/shivam17299/oral-cancer-lips-and-tongue-images)
+
+The catalogue deliberately records uncertain resources instead of silently presenting them as equivalent to original, patient-linked clinical cohorts. Filter `original_data` and `patient_level_split` in `datasets.csv` before selecting data for a study.
 
 ## Quality rules
 
