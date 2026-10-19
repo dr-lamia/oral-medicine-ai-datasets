@@ -13,7 +13,7 @@ A curated, research-focused catalogue of public datasets for artificial intellig
 - Documents access and metadata limitations.
 - Suggests publishable research uses rather than only listing downloads.
 
-The machine-readable catalogue is in [`datasets.csv`](datasets.csv). It currently tracks **26 resources**, including core oral-specific datasets, adjacent head-and-neck multimodal cohorts, evolving repositories, and derivative resources that require provenance caution.
+The machine-readable catalogue is in [`datasets.csv`](datasets.csv). It currently tracks **27 resources**, including core oral-specific datasets, adjacent head-and-neck multimodal cohorts, evolving repositories, and derivative resources that require provenance caution.
 
 ## Recommended datasets by research task
 
@@ -22,6 +22,7 @@ The machine-readable catalogue is in [`datasets.csv`](datasets.csv). It currentl
 | Egyptian multicentre OSCC histopathology | Alexandria OSCC + SinaiU-OMP | Patient-level development followed by cross-centre external validation |
 | OSCC prognosis | Multi-OSCC | Recurrence, lymph-node metastasis and histological-risk prediction |
 | Smartphone OPMD/cancer referral | MeMoSA + SMART-OM + BMIOCD | Geographic external validation and uncertainty-aware triage |
+| Normal oral mucosa and anomaly detection | CODE Oral Mucosa | Participant-held-out normative feature learning; external testing on another cohort |
 | Oral cytology | Multicentre Oral Cytology | Nucleus detection, slide classification and stain-domain generalization |
 | Odontogenic lesions | DOLCHID | CBCT segmentation and pathology-informed diagnosis |
 | Multimodal dental AI | COde | Longitudinal vision-language modelling and patient-level leakage analysis |
@@ -47,6 +48,7 @@ Recommended title:
 ### Oral mucosal clinical photography
 
 - **BMIOCD** — 800 original oral-cavity photographs (330 cancer, 470 non-cancer) from four Bangladeshi institutions; released 29 September 2026 under CC BY 4.0. Patient counts, identifiers, per-image centre labels and bounding boxes are unverified; confirm these before patient- or institution-held-out testing. Possible overlap with the related 2024 study remains unresolved. [Dataset](https://doi.org/10.17632/x4rkbb9zbk.1) · [Related paper](https://ieeexplore.ieee.org/document/10499560)
+- **CODE Oral Mucosa** — 5,566 quality-assured smartphone images from 704 participants at a Tamil Nadu spoke centre (5,386 normative; 163 variations from normal; 10 OPMD; 7 OSCC). Anonymized participant and centre IDs link images, polygon JSON annotations and clinical metadata. Figshare version 5 was available by April 2026; the data descriptor appeared 19 September 2026. This is an **original cohort independent of SMART-OM**, although both use the SMITA protocol; verify participant overlap before pooling. Best suited to normal-anatomy learning and anomaly detection, not cancer diagnostic accuracy. [Dataset](https://doi.org/10.6084/m9.figshare.30550889.v5) · [Paper](https://doi.org/10.1016/j.dib.2026.113270)
 - **MeMoSA** — 30,039 images from 6,426 individuals across five Asian countries, with patient- and lesion-level metadata. [Paper](https://doi.org/10.1038/s41597-026-06998-7)
 - **SMART-OM** — 2,469 smartphone images spanning normal, variations from normal, OPMD and oral cancer. [Paper](https://doi.org/10.1038/s41597-026-06954-5)
 
