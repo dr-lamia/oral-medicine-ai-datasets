@@ -100,7 +100,7 @@ Recommended title:
 ### Evolving, derivative or limited-provenance resources
 
 - **SMART/SMITA evolving release** — versioned smartphone-image resource that may overlap SMART-OM; deduplicate before combining. [Dataset](https://zenodo.org/records/16313710)
-- **Oral AI Prediction Outputs** — prediction CSVs, not a new patient or image cohort. [Repository](https://doi.org/10.5281/zenodo.19551358)
+- **OralPatho Reproducibility Assets** — a 12.3 GB public package containing ResNet50 patch embeddings, trained MIL weights, test-set prediction CSVs and a small de-identified WSI sample for binary OSCC detection and WD/MD/PD grading. The associated study used 1,925 multi-institutional WSIs, but the full source cohort is restricted; public patient identifiers, row-level clinical metadata and the sample-WSI count are not documented. Treat this as a reproducibility resource rather than a new public clinical cohort. [Dataset](https://doi.org/10.5281/zenodo.19551358) · [Preprint](https://doi.org/10.1101/2025.06.05.25329090) · [Code](https://github.com/NishaChaudhary23/oralpatho)
 - **Kaggle Oral Cancer Lips and Tongue** — retained only as a provenance-warning record. It should not support clinical claims until original sources, patient grouping and duplicates are verified. [Page](https://www.kaggle.com/datasets/shivam17299/oral-cancer-lips-and-tongue-images)
 
 The catalogue deliberately records uncertain resources instead of silently presenting them as equivalent to original, patient-linked clinical cohorts. Filter `original_data` and `patient_level_split` in `datasets.csv` before selecting data for a study.
