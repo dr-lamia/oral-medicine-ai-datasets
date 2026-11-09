@@ -13,7 +13,7 @@ A curated, research-focused catalogue of public datasets for artificial intellig
 - Documents access and metadata limitations.
 - Suggests publishable research uses rather than only listing downloads.
 
-The machine-readable catalogue is in [`datasets.csv`](datasets.csv). It currently tracks **28 resources**, including core oral-specific datasets, adjacent head-and-neck multimodal cohorts, evolving repositories, and derivative resources that require provenance caution.
+The machine-readable catalogue is in [`datasets.csv`](datasets.csv). It currently tracks **29 resources**, including core oral-specific datasets, adjacent head-and-neck multimodal cohorts, evolving repositories, and derivative resources that require provenance caution.
 
 ## Recommended datasets by research task
 
@@ -23,6 +23,7 @@ The machine-readable catalogue is in [`datasets.csv`](datasets.csv). It currentl
 | OSCC prognosis | Multi-OSCC | Recurrence, lymph-node metastasis and histological-risk prediction |
 | Smartphone OPMD/cancer referral | MeMoSA + SMART-OM + BMIOCD + PhotoMOCI | Geographic external validation and uncertainty-aware triage |
 | Normal oral mucosa and anomaly detection | CODE Oral Mucosa | Participant-held-out normative feature learning; external testing on another cohort |
+| Explainability and shortcut auditing | COLLECT | Base-image-grouped counterfactual testing of concept sensitivity, uncertainty and anatomical shortcuts |
 | Oral cytology | Multicentre Oral Cytology | Nucleus detection, slide classification and stain-domain generalization |
 | Odontogenic lesions | DOLCHID | CBCT segmentation and pathology-informed diagnosis |
 | Multimodal dental AI | COde | Longitudinal vision-language modelling and patient-level leakage analysis |
@@ -101,6 +102,7 @@ Recommended title:
 ### Evolving, derivative or limited-provenance resources
 
 - **SMART/SMITA evolving release** — versioned smartphone-image resource that may overlap SMART-OM; deduplicate before combining. [Dataset](https://zenodo.org/records/16313710)
+- **COLLECT** — 600 controlled counterfactual image files derived from only 40 independent clinical photographs: 10 each of aphthous ulcer, geographic tongue, hairy tongue and OSCC. For every base image, manual edits vary lesion size, colour and opacity across staged concept series. Diagnoses were established by histopathology or specialist assessment and reviewed by an expert panel, but patient counts, identifiers and demographic metadata are not reported. This is a derivative explainability benchmark, not a 600-patient training cohort; all variants from the same base image must remain together during evaluation. Released through Borealis under CC BY-NC-ND 4.0. [Dataset](https://doi.org/10.5683/SP3/KXYCNY) · [Paper](https://doi.org/10.1177/00220345261466240) · [Code](https://github.com/MadathilSA/COLLECT)
 - **OralPatho Reproducibility Assets** — a 12.3 GB public package containing ResNet50 patch embeddings, trained MIL weights, test-set prediction CSVs and a small de-identified WSI sample for binary OSCC detection and WD/MD/PD grading. The associated study used 1,925 multi-institutional WSIs, but the full source cohort is restricted; public patient identifiers, row-level clinical metadata and the sample-WSI count are not documented. Treat this as a reproducibility resource rather than a new public clinical cohort. [Dataset](https://doi.org/10.5281/zenodo.19551358) · [Preprint](https://doi.org/10.1101/2025.06.05.25329090) · [Code](https://github.com/NishaChaudhary23/oralpatho)
 - **Kaggle Oral Cancer Lips and Tongue** — retained only as a provenance-warning record. It should not support clinical claims until original sources, patient grouping and duplicates are verified. [Page](https://www.kaggle.com/datasets/shivam17299/oral-cancer-lips-and-tongue-images)
 
