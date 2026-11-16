@@ -13,7 +13,7 @@ A curated, research-focused catalogue of public datasets for artificial intellig
 - Documents access and metadata limitations.
 - Suggests publishable research uses rather than only listing downloads.
 
-The machine-readable catalogue is in [`datasets.csv`](datasets.csv). It currently tracks **29 resources**, including core oral-specific datasets, adjacent head-and-neck multimodal cohorts, evolving repositories, and derivative resources that require provenance caution.
+The machine-readable catalogue is in [`datasets.csv`](datasets.csv). It currently tracks **31 resources**, including core oral-specific datasets, adjacent head-and-neck multimodal cohorts, evolving repositories, and derivative resources that require provenance caution.
 
 ## Recommended datasets by research task
 
@@ -22,6 +22,8 @@ The machine-readable catalogue is in [`datasets.csv`](datasets.csv). It currentl
 | Egyptian multicentre OSCC histopathology | Alexandria OSCC + SinaiU-OMP | Patient-level development followed by cross-centre external validation |
 | OSCC prognosis | Multi-OSCC | Recurrence, lymph-node metastasis and histological-risk prediction |
 | Smartphone OPMD/cancer referral | MeMoSA + SMART-OM + BMIOCD + PhotoMOCI | Geographic external validation and uncertainty-aware triage |
+| Oral mucosal lesion segmentation | OralTriD | Patient-grouped external validation across devices and countries |
+| Periodontal photographic screening | MIO | Cross-device external validation and calibrated referral triage |
 | Normal oral mucosa and anomaly detection | CODE Oral Mucosa | Participant-held-out normative feature learning; external testing on another cohort |
 | Explainability and shortcut auditing | COLLECT | Base-image-grouped counterfactual testing of concept sensitivity, uncertainty and anatomical shortcuts |
 | Oral cytology | Multicentre Oral Cytology | Nucleus detection, slide classification and stain-domain generalization |
@@ -48,6 +50,7 @@ Recommended title:
 
 ### Oral mucosal clinical photography
 
+- **OralTriD** — 808 original high-resolution clinical photographs from 350 patients at two Shanghai hospitals: 293 oral lichen planus, 288 oral leukoplakia and 227 benign-ulcer images. Three oral-medicine specialists supplied diagnostic labels and pixel-level masks. The primary Zenodo release is CC BY 4.0; an unmodified KHDP mirror became available on 26 October 2026. The paper reports age, sex and anatomical-site distributions, but public row-level metadata and patient grouping identifiers need audit because each patient contributed 1–6 images. [Dataset](https://doi.org/10.5281/zenodo.15702341) · [Paper](https://doi.org/10.1016/j.identj.2026.109486) · [Code](https://github.com/ChengBW34/OralTriD) · [Mirror](https://khdp.net/database/data-search-detail/oral-diseases-segmentation-images)
 - **BMIOCD** — 800 original oral-cavity photographs (330 cancer, 470 non-cancer) from four Bangladeshi institutions; released 29 September 2026 under CC BY 4.0. Patient counts, identifiers, per-image centre labels and bounding boxes are unverified; confirm these before patient- or institution-held-out testing. Possible overlap with the related 2024 study remains unresolved. [Dataset](https://doi.org/10.17632/x4rkbb9zbk.1) · [Related paper](https://ieeexplore.ieee.org/document/10499560)
 - **CODE Oral Mucosa** — 5,566 quality-assured smartphone images from 704 participants at a Tamil Nadu spoke centre (5,386 normative; 163 variations from normal; 10 OPMD; 7 OSCC). Anonymized participant and centre IDs link images, polygon JSON annotations and clinical metadata. Figshare version 5 was available by April 2026; the data descriptor appeared 19 September 2026. This is an **original cohort independent of SMART-OM**, although both use the SMITA protocol; verify participant overlap before pooling. Best suited to normal-anatomy learning and anomaly detection, not cancer diagnostic accuracy. [Dataset](https://doi.org/10.6084/m9.figshare.30550889.v5) · [Paper](https://doi.org/10.1016/j.dib.2026.113270)
 - **PhotoMOCI** — 700 high-resolution clinical photographs from 700 participants at the Oral Medicine Unit of P. Giaccone University Hospital, Palermo, Italy, with 730 lesions across aphthous, traumatic and neoplastic classes. Histopathology-grounded labels and clinician-reviewed COCO polygons support classification, detection and segmentation. One image per patient makes the official 490/105/105 split patient-separated by design. Age and sex are represented, but anatomical site, stage and lesion-feature metadata are unavailable. The cohort is original rather than a repackaged Kaggle collection; however, its single-centre three-class spectrum limits generalization and the dataset-specific licence should be confirmed before redistribution. [Dataset](https://doi.org/10.34740/KAGGLE/DS/6080111) · [Peer-reviewed paper](https://doi.org/10.1007/s10278-026-02373-5) · [Code](https://github.com/marcoparola/oral3)
@@ -78,6 +81,7 @@ Recommended title:
 
 ### Clinical photography and referral
 
+- **MIO (My Intraoral Images)** — 765 original frontal RGB photographs from 765 Mexican adults: 225 healthy, 313 gingivitis and 227 periodontitis. The open Zenodo release supersedes the earlier restricted record; version 2 was posted 21 August 2026. Age and sex are reported by class, and filename identifiers supported patient-level splitting in the paper. Labels came from one experienced periodontist using visual inspection without periodontal probing or radiographs; melanosis, orthodontic appliances and prostheses were excluded. The current Zenodo page does not display a licence, so confirm reuse terms before redistribution. [Dataset](https://doi.org/10.5281/zenodo.22047269) · [Paper](https://doi.org/10.3390/biomedinformatics6040043) · [Code](https://github.com/SergioBrito98/Periodontal-Disease-Detector)
 - **Annotated Oral Cavity Images (Sri Lanka)** — 3,000 images from 714 patients with healthy, benign, OPMD and oral-cancer labels plus polygon/COCO annotations. [Dataset](https://zenodo.org/records/10664056) · [Paper](https://doi.org/10.1016/j.oraloncology.2024.106946)
 - **Cairo Annotated Oral Lesions** — 9,201 normal, low-risk and high-risk intraoral images with LabelMe annotations. [Dataset](https://zenodo.org/records/14571990) · [Paper](https://doi.org/10.1038/s41415-025-9007-6)
 - **Oral Images Dataset** — 323 primary benign/malignant images plus augmented derivatives; patient grouping needs verification. [Dataset](https://data.mendeley.com/datasets/mhjyrn35p4/2)
