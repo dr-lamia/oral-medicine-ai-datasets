@@ -67,7 +67,7 @@ Recommended title:
 
 ### Cytology
 
-- **Multicentre Oral Cytology** — Pap- and MGG-stained whole-slide images, patches, patient/slide metadata and expert nucleus annotations. [Dataset](https://zenodo.org/records/20686132)
+- **Multicentre Oral Cytology** — 368 Pap- and MGG-stained oral brush-cytology WSIs from 234 patients at ten Indian tertiary centres, plus 858 high-resolution patches and 39,246 expert-annotated nuclei in QuPath GeoJSON. Patient and slide identifiers support leakage-free grouping; metadata include age, sex, smoking and family history, lesion/site information, and diagnostic correlation where available. The approximately 700 GB release is divided across 11 linked Zenodo WSI records. The earlier arXiv manuscript was withdrawn on 6 November 2026 after benchmark-script errors were identified, so use the peer-reviewed *Scientific Data* descriptor and independently rerun model validation. The current Zenodo pages do not display a licence; confirm reuse terms before redistribution. [Dataset](https://doi.org/10.5281/zenodo.20686174) · [Peer-reviewed paper](https://doi.org/10.1038/s41597-026-07932-7)
 
 ### CBCT–histopathology
 
